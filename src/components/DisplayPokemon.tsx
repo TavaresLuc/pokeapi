@@ -1,4 +1,4 @@
-import Pokemon from "./Pokemon";
+import Pokemon from "./FetchData";
 
 
 const DisplayPokemon = ({pokemon}: any) => {
