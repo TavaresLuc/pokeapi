@@ -1,0 +1,38 @@
+
+.card {
+    
+    justify-content: center;
+    
+}
+
+.cardbox {
+    color: #242424;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pokeCard {
+    border-radius: 0.5em;
+    background-color: white;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 90%;
+    
+    
+}
+
+.front-image {
+    width: 10em;
+   // width: 100px;
+    justify-content: center;
+    text-align: center;
+    
+}

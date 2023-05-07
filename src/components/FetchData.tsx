@@ -1,5 +1,6 @@
 import { useEffect, useState} from 'react';
 import axios from 'axios';
+import './card.css'
 
 const Pokemon = ({thisPokemon}: any) => {
 
@@ -24,10 +25,10 @@ const Pokemon = ({thisPokemon}: any) => {
         
     return (
 
-        <div className="Pics">
+        <div className="pokeCard">
             
            <p> {poke.name} </p>
-           <img src={poke.sprites?.front_default} alt={poke.name} />
+           <img className="front-image" src={poke.sprites?.front_default} alt={poke.name} />
            
 
         </div>
