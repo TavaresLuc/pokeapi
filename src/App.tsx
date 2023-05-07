@@ -11,11 +11,11 @@ function App() {
     url: string;
   }
   
-  const [pokemon, setPokemon] = useState<Pokemon[]>([  { name: "bulbasaur", url: "http://pokeapi.co/api/v2/pokemon/1" }]);
+  const [pokemon, setPokemon] = useState<Pokemon[]>([  { name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1" }]);
   
 
   const getPokemons = () => {
-    axios.get('http://pokeapi.co/api/v2/pokemon')
+    axios.get('https://pokeapi.co/api/v2/pokemon')
     .then((response) => {
         console.log(response);
         setPokemon(response.data.results);
