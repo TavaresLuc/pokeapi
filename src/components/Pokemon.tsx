@@ -3,15 +3,16 @@ import axios from 'axios';
 
 const Pokemon = ({thisPokemon}: any) => {
 
-    const [onePokemon, setOnePokemon] = useState<any>({});
+    const [poke, setPoke] = useState<any>({});
 
     useEffect(() => {
+
         const getPokemon = (url: any) => {
           axios
             .get(url)
             .then((response) => {
               console.log(response);
-              setOnePokemon(response.data);
+              setPoke(response.data);
             })
             .catch((err) => {
               console.log(err);
@@ -19,14 +20,14 @@ const Pokemon = ({thisPokemon}: any) => {
         };
     
         getPokemon(thisPokemon.url);
-      }, []); // <-- array de dependências vazio
+      }, []); // <-- array de dependências vazio -> Necessary to stop the infinite loop
         
     return (
 
         <div className="Pics">
             
-           <p> {onePokemon.name} </p>
-           <img src={onePokemon.sprites?.front_default} alt={onePokemon.name} />
+           <p> {poke.name} </p>
+           <img src={poke.sprites?.front_default} alt={poke.name} />
            
 
         </div>
