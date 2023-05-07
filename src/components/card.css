@@ -20,19 +20,27 @@
 .pokeCard {
     border-radius: 0.5em;
     background-color: white;
-    width: 200px;
+    width: calc(33.33% - 1em);
     justify-content: center;
     align-items: center;
     text-align: center;
     opacity: 90%;
     
+    @media (max-width:400px) {
+        width: 45%;
+    }
     
 }
+    
+
 
 .front-image {
-    width: 10em;
+    width: 8em;
    // width: 100px;
     justify-content: center;
     text-align: center;
     
+    @media (max-width: 500px) {
+        width: 5em;
+    }
 }
